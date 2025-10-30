@@ -1,4 +1,6 @@
-   // Orbit nav placement
+// For future more advance added the logics to implement bottom nav, fake form added for future, for filter the projects in future.
+
+// Orbit nav placement
     (function(){
       const orbit = document.getElementById('navOrbit');
       const btns = orbit.querySelectorAll('button');
@@ -63,8 +65,9 @@
     }
 
     // contact form quick fake handler
-    document.getElementById('contactForm').addEventListener('submit', (e)=>{
-      e.preventDefault();
-      alert('Thanks — message received (demo). We will reply at hello@aastudio.ai');
-      e.target.reset();
-    });
+   // document.getElementById('contactForm').addEventListener('submit', (e)=>{
+   //   e.preventDefault();
+   //   alert('Thanks — message received (demo). We will reply at hello@aastudio.ai');
+   //   e.target.reset();
+
+   // });
