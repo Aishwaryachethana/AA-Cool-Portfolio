@@ -35,22 +35,22 @@
 
     // GSAP scroll reveals
     gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray('section, .project, .panel').forEach((el,i)=>{
+    gsap.utils.toArray('section, .project, .panel').forEach((el)=>{
       gsap.from(el, {
-        y: 30, opacity:0, duration:0.9, delay: i*0.06,
+        y: 30, opacity:0, duration:0.6,
         scrollTrigger:{trigger:el, start:'top 90%'}
       });
     });
 
     // project filter
-    document.querySelectorAll('.filter').forEach(btn=>{
+   /* document.querySelectorAll('.filter').forEach(btn=>{
       btn.addEventListener('click', ()=>{
-        const f = btn.getAttribute('data-filter');
+       const f = btn.getAttribute('data-filter');
         document.querySelectorAll('#projectsGrid .project').forEach(p=>{
           p.style.display = (f==='all' || p.getAttribute('data-type')===f || (f==='gen' && p.getAttribute('data-type')==='gen')) ? 'block' : 'none';
         });
       });
-    });
+    });*/
 
     // playful tilt for card
     const card = document.getElementById('interactive-card');
@@ -65,9 +65,10 @@
     }
 
     // contact form quick fake handler
-   // document.getElementById('contactForm').addEventListener('submit', (e)=>{
-   //   e.preventDefault();
-   //   alert('Thanks — message received (demo). We will reply at hello@aastudio.ai');
-   //   e.target.reset();
+   /* document.getElementById('contactForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      alert('Thanks — message received (demo). We will reply at hello@aastudio.ai');
+     e.target.reset();
 
-   // });
+   });
+*/
