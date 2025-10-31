@@ -38,10 +38,8 @@
 
 
 // ----------------------------------------- 
-
-// For future more advance added the logics to implement bottom nav, fake form added for future, for filter the projects in future.
-
-// Orbit nav placement
+   
+   // Orbit nav placement
     (function(){
       const orbit = document.getElementById('navOrbit');
       const btns = orbit.querySelectorAll('button');
@@ -84,14 +82,14 @@
     });
 
     // project filter
-   /* document.querySelectorAll('.filter').forEach(btn=>{
+    document.querySelectorAll('.filter').forEach(btn=>{
       btn.addEventListener('click', ()=>{
-       const f = btn.getAttribute('data-filter');
+        const f = btn.getAttribute('data-filter');
         document.querySelectorAll('#projectsGrid .project').forEach(p=>{
           p.style.display = (f==='all' || p.getAttribute('data-type')===f || (f==='gen' && p.getAttribute('data-type')==='gen')) ? 'block' : 'none';
         });
       });
-    });*/
+    });
 
     // playful tilt for card
     const card = document.getElementById('interactive-card');
@@ -106,11 +104,8 @@
     }
 
     // contact form quick fake handler
-   /* document.getElementById('contactForm').addEventListener('submit', (e)=>{
+    document.getElementById('contactForm').addEventListener('submit', (e)=>{
       e.preventDefault();
       alert('Thanks — message received (demo). We will reply at hello@aastudio.ai');
-     e.target.reset();
-
-   });
-*/
-
+      e.target.reset();
+    });
