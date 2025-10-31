@@ -82,6 +82,7 @@
   text-shadow: 0 0 10px #ffffff, 0 0 15px #ffffff;
   transition: all 0.3s ease-in-out;
 }
+
   /* responsive tweak */
   @media (max-width: 768px) {
     .nav-sleek {
@@ -91,7 +92,7 @@
     }
   }
     /* header */
-    header{position:relativity;top:0;z-index:900;background:linear-gradient(180deg, rgba(7,18,41,0.55), transparent);backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.02)}
+    header{position:relative;top:0; z-index:900;background:linear-gradient(180deg, rgba(7,18,41,0.55), transparent);backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.02)}
     .brand{font-weight:800;letter-spacing:0.6px}
 
     /* hero */
@@ -151,5 +152,4 @@
 
     /* small decorative */
     .micro{font-size:.82rem;color:var(--muted)}
-
     .duominds{font-size: 35px;font-weight: 900; color:#d392ff}
