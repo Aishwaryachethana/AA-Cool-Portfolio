@@ -1,3 +1,44 @@
+//----------For nav animation
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-sleek a");
+
+  function activateMenu() {
+    const scrollY = window.scrollY + window.innerHeight / 3; // smart offset (⅓ viewport down)
+    let activated = false;
+
+    sections.forEach((current) => {
+      const sectionTop = current.offsetTop;
+      const sectionHeight = current.offsetHeight;
+      const sectionId = current.getAttribute("id");
+
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("active");
+            activated = true;
+          }
+        });
+      }
+    });
+
+    // ✅ Handle top zone (Home)
+    if (!activated && window.scrollY < 200) {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#home") {
+          link.classList.add("active");
+        }
+      });
+    }
+  }
+
+  window.addEventListener("scroll", activateMenu);
+  window.addEventListener("load", activateMenu);
+
+
+// ----------------------------------------- 
+
 // For future more advance added the logics to implement bottom nav, fake form added for future, for filter the projects in future.
 
 // Orbit nav placement
@@ -72,3 +113,4 @@
 
    });
 */
+
